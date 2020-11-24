@@ -23,7 +23,7 @@ class IObserver(metaclass=abc.ABCMeta):
 
 
 class HeroObserver(IObserver):
-    def __init__(self, hero: Hero) -> None: 
+    def __init__(self, hero: Hero) -> None:
         self.hero = hero
 
     def update(self, signal: Signal) -> None:

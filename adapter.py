@@ -31,12 +31,13 @@ class ActiveEquipmentAdapter(INonTargetedSkill):
     def attack(self, *args, **kwargs) -> None:
         self.active_equipment.release(*args, **kwargs)
 
+
 # 生成左伊
 zoe = Hero()
 # 左伊捡到救赎
 salvation = ActiveEquipment()
 salvation_adapter = ActiveEquipmentAdapter(salvation)
-# 赋值稍微粗糙 
+# 赋值稍微粗糙
 zoe.w = salvation_adapter
 
 # 左伊释放w技能

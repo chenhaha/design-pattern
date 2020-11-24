@@ -10,19 +10,19 @@ class ISensitiveWordFilter(metaclass=abc.ABCMeta):
 
 class RudeWordFilter(ISensitiveWordFilter):
     def filter(string: str) -> str:
-        print('filter rule words')
+        print("filter rule words")
         return string
 
 
 class SexyWordFilter(ISensitiveWordFilter):
     def filter(string: str) -> str:
-        print('filter sexy words')
+        print("filter sexy words")
         return string
 
 
 class AdWordFilter(ISensitiveWordFilter):
     def filter(string: str) -> str:
-        print('filter advertisement words')
+        print("filter advertisement words")
         return string
 
 
@@ -45,5 +45,5 @@ chain = SensitiveWordFilterChain()
 chain.add_filter(RudeWordFilter())
 chain.add_filter(SexyWordFilter())
 chain.add_filter(AdWordFilter())
-sentence = 'This sentence contains rude, sexy words and advertisement'
+sentence = "This sentence contains rude, sexy words and advertisement"
 new_sentence = chain.filter(sentence)

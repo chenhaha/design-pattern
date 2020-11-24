@@ -1,3 +1,5 @@
 {
-    "python.pythonPath": "/Users/seth/opt/anaconda3/bin/python"
+    "python.pythonPath": "/Users/seth/opt/anaconda3/bin/python",
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true
 }
